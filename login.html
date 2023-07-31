@@ -11,30 +11,48 @@
 </head>
 
 <body>
-	<h2>로그인 또는 회원가입</h2>
-	<p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
-	<form class="login-form">
-		<input type="text" id="id" placeholder="아이디">
-		<label for="id" class="a11y-hidden">아이디</label>
-		<input type="password" id="password" placeholder="비밀번호">
-		<label for="password" class="a11y-hidden">아이디</label>
+	<div class="container">
+		<header>
+			<h1>로그인 또는 회원가입</h1>
+			<div class="underline"></div>
+		</header>
+		<h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
+		<form class="login-form">
+			<input type="text" id="id" placeholder="아이디">
+			<label for="id" class="a11y-hidden">아이디</label>
+			<input type="password" id="password" placeholder="비밀번호">
+			<label for="password" class="a11y-hidden">아이디</label>
 
-		<input type="checkbox" id="login-hold">
-		<label for="login-hold">로그인 상태 유지</label>
+			<input type="checkbox" id="login-hold">
+			<label for="login-hold">로그인 상태 유지</label>
 
-		<button type="button" class="login-btn">로그인</button>
+			<button type="button" class="login-btn">로그인</button>
 
-		<a href="signup.html">회원가입</a> | <a href="find.html">아이디/비밀번호 찾기</a>
-		<p>
-			또는
-		</p>
+			<div class="href-group">
+				<a href="signup.html">회원가입</a>
+				<span>|</span>
+				<a href="find.html">아이디/비밀번호 찾기</a>
+			</div>
+			<div class="divider">
+				<span>또는</span>
+			</div>
 
-		<button type="button" class="login-btn"><img src="images/Google__G__Logo 1.png" alt="google">구글 계정으로 로그인<span class="hidden"></span></button>
-		<button type="button" class="login-btn fb-btn"><img src="images/facebook.png" alt="facebook">페이스북 계정으로 로그인<span class="hidden"></span></button>
-		<button type="button" class="login-btn n-btn"><img src="images/naver-logo.png" alt="naver">네이버 계정으로 로그인<span class="hidden"></span></button>
-		<button type="button" class="login-btn kt-btn"><img src="images/message-circle.png" alt="kakaotalk">카카오톡 계정으로 로그인<span class="hidden"></span></button>
+			<div class="btn-group">
+				<button type="button" class="login-btn">
+					<img src="images/Google__G__Logo 1.png" alt="google"><span>구글 계정으로
+						로그인</span></button>
+				<button type="button" class="login-btn fb-btn">
+					<img src="images/facebook.png" alt="facebook"><span>페이스북 계정으로
+						로그인</span></button>
+				<button type="button" class="login-btn n-btn">
+					<img src="images/naver-logo.png" alt="naver"><span>네이버 계정으로 로그인</span></button>
+				<button type="button" class="login-btn kt-btn">
+					<img src="images/message-circle.png" alt="kakaotalk"><span>카카오톡 계정으로
+						로그인</span></button>
+			</div>
 
-	</form>
+		</form>
+	</div>
 </body>
 
 </html>
