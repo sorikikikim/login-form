@@ -1,22 +1,36 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
-body, h1, h2, h3, div, p, button, input, label {
+body, 
+h1, 
+h2, 
+div, 
+p, 
+button, 
+input, 
+label,
+span,
+a {
 	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F2F2F2;
 }
 
 a {	
-	font-family: 'Spoqa Han Sans Neo';
 	text-decoration: none;
 	color: inherit;
 }
 
-button {
-	background: none;
-	border-radius: 5px;
-	border: 1px solid #767676;
-	color: #767676;
+button:enabled {
+	cursor: pointer;
+}
+
+img {
+	vertical-align: top;
 }
 
 .a11y-hidden {
@@ -41,18 +55,30 @@ button {
 	background: #FFF;
 }
 
-h1 {
+/* header - 제목 */
+header {
+	position: relative;
+}
+
+header h1 {
 	text-align: center;
 	margin: 20px 0; 
 	font-weight: 500;
 	font-size: 16px;
 }
 
-h2 {
-	margin: 26px 0 24px 24px;
-	line-height: 24px;
-	font-weight: 500;
-	font-size: 20px;
+header .close-btn {
+	position: absolute;
+	background: none;
+	border: none;
+	right: 24px;
+	top: 50%;
+	transform: translate(50%, -50%);
+}
+
+.close-btn img {
+	width: 16px;
+	height: 16px;
 }
 
 .underline {
@@ -62,17 +88,88 @@ h2 {
 	background-color: #C4C4C4;
 }
 
-.href-group {
+/* main - 로그인 폼 */
+main h2 {
+	margin: 26px 0 24px 24px;
+	line-height: 24px;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.login-form {
+	color: #767676;
+	width: 520px;
 	display: flex;
+	flex-direction: column;
+}
+
+.login-insert input {
+	width: 472px;
+	height: 50px;
+	border: 1px solid #C4C4C4;
+	border-radius: 5px;
+}
+
+.login-insert input::placeholder {
+	padding-left: 16px;
+} 
+
+.login-insert input[type=text] {
+	margin: 0 24px;
+}
+
+.login-insert input[type=text]:focus {
+	outline: 2px solid #F4492E;
+}
+
+
+.login-insert input[type=password] {
+	margin: 10px 0 17px 24px;
+}
+
+.login-hold {
+	display: flex;
+	margin-left: 28px;
+}
+
+.login-hold label {
+	margin-left: 8px;
+}
+
+.login-btn {
+	width: 472px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.login-form button {
+	margin: 20px 24px;
+	border: none;
+	background: #2F80ED;
+	color: #FFF;
+}
+
+/* 회원가입 및 찾기 */
+.href-group {
+	margin: 0 auto 10px auto;
 }
 
 .href-group span {
 	margin: 0 12px;
 }
 
+.href-group span:hover {
+	margin: 0 12px;
+}
+
+/* 구분선 */
 .divider {
   position: relative;
-  margin-bottom: 15px;
+  margin: 20px 0px;
 	text-align: center;
 }
 
@@ -80,9 +177,9 @@ h2 {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #C2C7D0;
+  background-color: #C4C4C4;
   position: absolute;
-  top: 9px;
+  top: 0.5em;
   left: 0;
 }
 
@@ -93,25 +190,13 @@ h2 {
   position: relative;
 }
 
-.login-form {
-	color: #767676;
-	width: 520px;
-	display: flex;
-	flex-direction: column;
-}
-
-
-.login-form input {
-	margin: 0 24px;
-}
-
-.login-btn {
-	width: 472px;
-	height: 50px;
-	display: flex;
-	align-items: center;
-	background: #FFF;
+/* sns 로그인 */
+.sns-login {
 	margin: 5px 24px;
+	background: #FFF;
+	background: none;
+	border: 1px solid #767676;
+	color: #767676;
 }
 
 .login-btn img {
@@ -122,6 +207,7 @@ h2 {
 
 .login-btn span {
 	margin: auto;
+	font-size: 16px;
 }
 
 .fb-btn {
