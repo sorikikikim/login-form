@@ -18,6 +18,10 @@ a {
 
 body {
 	background-color: #F2F2F2;
+	position:absolute;
+  top:50%;
+  left:50%;
+	transform:translate(-50%,-50%);
 }
 
 a {	
@@ -47,7 +51,7 @@ img {
 .container {
 	display: flex;
 	flex-direction: column;
-	margin: 50px auto 50px;
+	margin: auto;
 	width: 520px;
 	height: 712px;
 	border-radius: 10px;
@@ -134,7 +138,34 @@ main h2 {
 
 .login-hold label {
 	margin-left: 8px;
+	cursor: pointer;
 }
+
+
+input#login-hold{
+  display:none;
+  }
+
+
+/* 체크하기 전 상태 */
+input#login-hold+label:before{
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/checkbox.svg');
+  vertical-align: middle;
+	margin-right: 8px;
+  }
+  
+
+/* 체크 된 상태 */  
+input#login-hold:checked+label:before{
+  content:"";
+  background-image: url('../images/checkedbox.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  }
 
 .login-btn {
 	width: 472px;
@@ -162,8 +193,8 @@ main h2 {
 	margin: 0 12px;
 }
 
-.href-group span:hover {
-	margin: 0 12px;
+.href-group a:hover {
+	text-decoration: underline;
 }
 
 /* 구분선 */
@@ -192,7 +223,7 @@ main h2 {
 
 /* sns 로그인 */
 .sns-login {
-	margin: 5px 24px;
+	margin: 10px 24px;
 	background: #FFF;
 	background: none;
 	border: 1px solid #767676;
